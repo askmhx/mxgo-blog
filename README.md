@@ -1,4 +1,4 @@
-blgo
+BlGo
 ====
 
-A blog powered by mxgo
+A blog powered by MxGo
