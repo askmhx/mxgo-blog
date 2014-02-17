@@ -1,4 +1,4 @@
-package demo
+package blgo
 
 import "com.github/menghx/mxgo"
 
