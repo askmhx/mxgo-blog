@@ -4,13 +4,13 @@ import (
 	"github.com/menghx/mxgo"
 	"os"
 	"fmt"
-	"blgo/app/filters"
+	"blgo/app/filter"
 )
 
 func main(){
 	fmt.Println(os.Getwd())
 	mxgo.Router("/index","*","App.Index")
-	mxgo.AddFilter(&filters.LoginFilter{},&filters.LoginFilter{})
+	mxgo.AddFilter(&filter.LoginFilter{},&filter.LoginFilter{})
 	mxgo.EnableAdmin(true)
 	mxgo.Run()
 }

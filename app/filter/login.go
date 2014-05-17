@@ -1,4 +1,4 @@
-package filters
+package filter
 import "github.com/menghx/mxgo"
 
 type LoginFilter struct {
