@@ -5,6 +5,6 @@ type LoginFilter struct {
 
 }
 
-func (lf LoginFilter)Execute(action *mxgo.Action){
+func (lf LoginFilter)Execute(ctrl *mxgo.Controller){
 
 }
