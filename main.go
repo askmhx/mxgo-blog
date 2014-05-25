@@ -1,13 +1,16 @@
 package main
 
 import (
-	"blog/app/filter"
 	"github.com/menghx/mxgo"
+	"blog/app/filters"
+	"blog/app/controllers"
 )
 
 func main() {
-	mxgo.Router("/index", "*", "App.Index")
-	mxgo.AddFilter(&filter.LoginFilter{}, &filter.LoginFilter{})
+	mxgo.Router("GET:/test",&controllers.Index{},"Test")
+	mxgo.Router("*:/index",&controllers.Index{},"Index")
+	mxgo.Router("*:/blog/(P?)",&controllers.Blog{},"View")
+	mxgo.AddFilter(&filters.LoginFilter{}, &filters.LoginFilter{})
 	mxgo.EnableAdmin(true)
 	mxgo.Run()
 }
