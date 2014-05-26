@@ -6,6 +6,6 @@ type Blog struct{
 	mxgo.Controller
 }
 
-func (blog Blog)view(bid string) mxgo.Result{
+func (blog Blog)View(bid string) mxgo.Result{
 	return blog.Template()
 }
